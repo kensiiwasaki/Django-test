@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+# SECURITY WARNING: keep the secret key used in production secret!
+from .settings_local import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,9 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kbk$mtos3!v*58d%sgvj1k&f6(cgxt636)d=$n0dd^zzt7(rqt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
