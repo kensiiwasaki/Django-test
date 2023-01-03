@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse   #追加
+from .models import item
  
 # Create your views here.
 ###以下追加###
@@ -13,3 +14,9 @@ def foo(request):
 
 def hello(request):                       #新たにhello( )関数を追加
     return render(request, 'index.html')  #追加
+
+def show_item(request,item_code):
+    # item_codeで指定された商品コードでデータベースを検索しデータを取得
+    Item = item.objects.get(code=item_code)
+    context = {'item':Item, }
+    return render(request, 'item.html', context)
