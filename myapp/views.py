@@ -10,3 +10,6 @@ def index(request):
 def foo(request):
     html = "<h1>fooが指定されたときのページです</h1>"
     return HttpResponse(html)
+
+def hello(request):                       #新たにhello( )関数を追加
+    return render(request, 'index.html')  #追加
